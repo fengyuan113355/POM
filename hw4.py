@@ -52,6 +52,7 @@ def data_read(path,test_path):
             else:
                 #data_all[item] = data_all[item].astype(np.int)
                 result = np.hstack((result, np.array(data_all[item]).reshape(-1,1) ))
+                attri_record.append(item)
 
         else:
             num = data_all[item].isna().sum()
@@ -72,6 +73,7 @@ def data_read(path,test_path):
                     #data_all[item] = data_all[item].astype(np.int)
 
                     result = np.hstack((result, np.array(data_all[item]).reshape(-1,1) ))
+                    attri_record.append(item)
 
 
 
