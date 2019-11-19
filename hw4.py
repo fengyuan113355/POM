@@ -96,7 +96,7 @@ def mse(gen,bench):
 
     plt.figure()
     plt.plot(x,y)
-    plt.savefig("easyplot.jpg")
+    plt.savefig("easyplot.png")
 
     return num/len(gen)
 
