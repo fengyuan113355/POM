@@ -17,6 +17,7 @@ from pandas.core.frame import DataFrame
 
 
 def data_read(path,test_path):
+    mixed = (50,53,54,55,56,255,256,257,258,260,268,376)
 
     data_all = pd.read_csv(path)
     data_test_all = pd.read_csv(test_path)
@@ -37,8 +38,11 @@ def data_read(path,test_path):
     attri_record = []
 
 
-
+    current = -1
     for item in attri:
+        current = current+1
+        if current in mixed:
+            continue
         if item=="job_performance":
             label = list(data_all[item])
             continue
